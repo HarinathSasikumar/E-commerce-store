@@ -1,0 +1,25 @@
+{
+  "name": "luxemart-ecommerce",
+  "version": "1.0.0",
+  "description": "Premium MERN Stack E-Commerce Platform",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --prefix-colors \"cyan,magenta\" --prefix \"[{name}]\" --names \"BACKEND,FRONTEND\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && node server.js",
+    "frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && node data/seeder.js",
+    "seed:destroy": "cd backend && node data/seeder.js -d",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": [
+    "ecommerce",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "LuxeMart",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

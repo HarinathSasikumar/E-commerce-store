@@ -1,0 +1,11 @@
+.not-found { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.not-found__bg { position: absolute; inset: 0; pointer-events: none; }
+.not-found__orb { position: absolute; border-radius: 50%; filter: blur(80px); }
+.not-found__orb--1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,58,237,0.2), transparent 70%); top: -100px; left: -100px; }
+.not-found__orb--2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(219,39,119,0.15), transparent 70%); bottom: -50px; right: -50px; }
+.not-found__inner { position: relative; z-index: 1; }
+.not-found__content { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.not-found__code { font-size: clamp(6rem, 20vw, 12rem); font-weight: 900; line-height: 1; letter-spacing: -0.05em; }
+.not-found__title { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+.not-found__sub { color: var(--text-muted); max-width: 460px; line-height: 1.7; }
+.not-found__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
