@@ -159,8 +159,12 @@ export default function Navbar() {
               <FiSearch className="navbar__search-icon" />
               <input ref={searchRef} type="text" value={searchVal} onChange={e => setSearchVal(e.target.value)}
                 placeholder="Search products..." className="navbar__search-input" />
-              <button type="submit" className="btn btn-primary navbar__search-submit">Search</button>
-              <button type="button" className="navbar__icon-btn navbar__search-close" onClick={() => setSearchOpen(false)}><FiX /></button>
+              <button type="submit" className="navbar__search-submit" aria-label="Submit Search">
+                <FiSearch />
+              </button>
+              <button type="button" className="navbar__icon-btn navbar__search-close" onClick={() => setSearchOpen(false)} aria-label="Close Search">
+                <FiX />
+              </button>
             </form>
           </motion.div>
         )}

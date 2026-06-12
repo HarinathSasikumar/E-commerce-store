@@ -331,12 +331,17 @@
   .categories-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .hero { padding-top: 5rem; min-height: auto; padding-bottom: 4rem; }
+  .hero__inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .hero__title { font-size: clamp(2rem, 8vw, 3.5rem); }
   .hero__visual { display: none; }
   .hero__actions { justify-content: center; }
   .hero__stats { justify-content: center; }
   .hero__sub { margin: 0 auto; }
   .hero__eyebrow { margin: 0 auto; }
+  .hero__scroll-hint { display: none; }
+  .features-bar__inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 768px) {
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
@@ -344,6 +349,8 @@
   .section-header.flex { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
 @media (max-width: 480px) {
+  .hero__floating-card--mini { bottom: 20px; padding: 0.5rem 0.85rem; font-size: 0.8rem; }
+  .hero__floating-card--badge { top: 10px; padding: 0.5rem 0.85rem; font-size: 0.75rem; }
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .features-bar__inner { grid-template-columns: 1fr; }
   .cta-banner { padding: 3rem 1.5rem; }
