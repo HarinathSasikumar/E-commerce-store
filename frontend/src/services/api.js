@@ -1,8 +1,11 @@
 import axios from 'axios';
 
-const API = axios.create({ 
-  baseURL: import.meta.env.VITE_API_URL || '/api' 
-});
+let baseURL = import.meta.env.VITE_API_URL || '/api';
+if (baseURL.startsWith('http') && !baseURL.endsWith('/api')) {
+  baseURL = baseURL.replace(/\/$/, '') + '/api';
+}
+
+const API = axios.create({ baseURL });
 
 console.log("🛠️ LuxeMart API connecting to:", API.defaults.baseURL);
 

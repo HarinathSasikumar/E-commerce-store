@@ -221,5 +221,12 @@
   .navbar__mobile-toggle { display: flex; }
 }
 @media (max-width: 480px) {
-  .navbar__logo { font-size: 1.2rem; }
+  .navbar__logo { font-size: 1.15rem; }
+  .navbar__logo-icon { width: 28px; height: 28px; font-size: 0.9rem; }
+  .navbar__actions { gap: 0.25rem; }
+  .navbar__icon-btn, .navbar__avatar-btn, .navbar__avatar { 
+    width: 36px; 
+    height: 36px; 
+    font-size: 0.9rem;
+  }
 }
