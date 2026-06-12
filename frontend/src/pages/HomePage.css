@@ -13,6 +13,12 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  background-color: #000;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
 }
 .hero__orb {
   position: absolute;
@@ -30,10 +36,7 @@
   bottom: -50px; right: -50px;
 }
 .hero__orb--3 {
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(251,191,36,0.25) 0%, transparent 70%);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 .hero__grid {
   position: absolute;
@@ -84,10 +87,11 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 .hero__sub {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   line-height: 1.7;
   max-width: 500px;
@@ -102,8 +106,8 @@
   margin-top: 0.5rem;
 }
 .hero__stat { display: flex; flex-direction: column; gap: 0.1rem; }
-.hero__stat-val { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); }
-.hero__stat-label { font-size: 0.82rem; font-weight: 500; color: var(--text-secondary); }
+.hero__stat-val { font-size: 1.4rem; font-weight: 800; color: #ffffff; }
+.hero__stat-label { font-size: 0.82rem; font-weight: 500; color: rgba(255, 255, 255, 0.75); }
 
 /* Hero visual */
 .hero__visual { display: flex; align-items: center; justify-content: center; }
@@ -159,14 +163,19 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  z-index: 1;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: bounce 2s infinite;
 }
 .hero__scroll-mouse {
-  width: 22px; height: 36px;
-  border: 2px solid var(--glass-border);
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255,255,255,0.5);
   border-radius: 12px;
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -174,7 +183,7 @@
 }
 .hero__scroll-wheel {
   width: 3px; height: 8px;
-  background: var(--primary-light);
+  background: #fff;
   border-radius: 2px;
   animation: scroll 2s infinite;
 }

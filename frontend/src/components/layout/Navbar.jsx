@@ -155,12 +155,12 @@ export default function Navbar() {
         {searchOpen && (
           <motion.div className="navbar__search-overlay glass"
             initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-            <form className="navbar__search-form container" onSubmit={handleSearch}>
+            <form className="navbar__search-form" onSubmit={handleSearch}>
               <FiSearch className="navbar__search-icon" />
               <input ref={searchRef} type="text" value={searchVal} onChange={e => setSearchVal(e.target.value)}
-                placeholder="Search for products, brands, categories..." className="navbar__search-input" />
-              <button type="submit" className="btn btn-primary btn-sm">Search</button>
-              <button type="button" className="navbar__icon-btn" onClick={() => setSearchOpen(false)}><FiX /></button>
+                placeholder="Search products..." className="navbar__search-input" />
+              <button type="submit" className="btn btn-primary navbar__search-submit">Search</button>
+              <button type="button" className="navbar__icon-btn navbar__search-close" onClick={() => setSearchOpen(false)}><FiX /></button>
             </form>
           </motion.div>
         )}
